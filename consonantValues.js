@@ -27,7 +27,6 @@ function solve(string) {
 };
 
 function getValue(str) {
-  console.log('str:', str);
   let sum = 0;
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
@@ -39,7 +38,9 @@ function getValue(str) {
   return sum;
 };
 
-console.log(solve('hippopotamus'));
-console.log(solve('chruschtschov'));
-console.log(solve('the sky is blue'));
-console.log(solve(''));
+
+console.log(solve('zodiac')); // 26
+console.log(solve('strength')); // 57
+console.log(solve('chruschtschov')); // 80
+console.log(solve('abcde')); // 9 
+console.log(solve('')); // 0
