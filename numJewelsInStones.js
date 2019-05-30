@@ -16,7 +16,6 @@ function numJewelsInStones(str1, str2) {
   return count;
 };
 
-
 // time complexity: O(2n) **drop constant** >>> O(n)
 function numJewelsInStones(str1, str2) {  
   // declare storage object for str1
@@ -28,8 +27,11 @@ function numJewelsInStones(str1, str2) {
     library[str1[i]] = true;
   }
   
+  // iterate through str2
   for (let j = 0; j < str2.length; j++) {
+    // check if current character exists in library
     if(library[str2[j]]) {
+      // if it does, increment count
       count++;
     }
   }
