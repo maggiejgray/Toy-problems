@@ -9,8 +9,10 @@ function firstNonRepeatedCharacter(string) {
   // iterate through string and create count for each letter
   for (let i = 0; i < string.length; i++) {
     if (!obj[string[i]]) {
+      // if not already in object, create
       obj[string[i]] = 1;
     } else {
+      // else increment for that character 
       obj[string[i]]++;
     }
   }
