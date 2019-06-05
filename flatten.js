@@ -52,3 +52,4 @@ function flatten (arrays) {
 
 console.log(flatten([[10], [20, 30], [40]]));
 console.log(flatten([1, 2, [3], 4, [5, [6], 7]]));
+console.log(flatten([[[[]]]]));
