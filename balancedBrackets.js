@@ -17,19 +17,16 @@ function isBalanced (str) {
   };
   // iterate through str
   for (let i = 0; i < str.length; i ++) {
-    // only check brackets
-    if (openers[str[i]] || closers[str[i]]) {
-      // if opening bracket
-      if (openers[str[i]]) {
-        // push to stack
-        stack.push(str[i]);
-        // if closing bracket
-      } else if (closers[str[i]]) {
-        // check if matches bracket at top of stack 
-        if (stack.pop() !== closers[str[i]]) {
-          // if it does not return false
-          return false;
-        }
+    // if opening bracket
+    if (openers[str[i]]) {
+      // push to stack
+      stack.push(str[i]);
+      // if closing bracket
+    } else if (closers[str[i]]) {
+      // check if matches bracket at top of stack 
+      if (stack.pop() !== closers[str[i]]) {
+        // if it does not return false
+        return false;
       }
     }
   }
